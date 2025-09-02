@@ -605,5 +605,9 @@ footer .copyright a:hover {
         width: 1.5vw;
         margin: 0 1vw 20px 0;
     }
+  
+    .fa-bag-shopping, .fa-shopping-bag {
+        margin-top: 20px;
+    }
 }
 /* END */
