@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .login-container {
+        max-width: 400px;
+        margin: 100px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #ccc;
+      }
+      .login-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .login-container input {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .login-container button {
+        width: 100%;
+        padding: 10px;
+        background: coral;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+      .login-container .switch {
+        text-align: center;
+        margin-top: 10px;
+      }
+      .login-container .switch a {
+        color: coral;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container" id="login-box">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Username" />
+      <div style="position: relative">
+        <input
+          type="password"
+          id="login-password"
+          placeholder="Password"
+          style="padding-right: 35px"
+        />
+        <span onclick="togglePasswordVisibility('login-password','login-eye')">
+        </span>
+      </div>
+      <button onclick="login()">Login</button>
+      <div class="switch">
+        Don't have an account? <a onclick="showSignup()">Sign up</a>
+      </div>
+    </div>
+    <div class="login-container" id="signup-box" style="display: none">
+      <h2>Sign Up</h2>
+      <input type="text" id="signup-fullname" placeholder="Full Name" />
+      <input type="email" id="signup-email" placeholder="Email" />
+      <input type="text" id="signup-username" placeholder="Username" />
+      <div style="position: relative">
+        <input
+          type="password"
+          id="signup-password"
+          placeholder="Password"
+          style="padding-right: 35px"
+        />
+        <span
+          onclick="togglePasswordVisibility('signup-password','signup-eye')"
+        >
+        </span>
+      </div>
+      <div style="position: relative">
+        <input
+          type="password"
+          id="signup-confirm-password"
+          placeholder="Confirm Password"
+          style="padding-right: 35px"
+        />
+        <span
+          onclick="togglePasswordVisibility('signup-confirm-password','signup-confirm-eye')"
+        >
+        </span>
+      </div>
+      <button onclick="signup()">Sign Up</button>
+      <div class="switch">
+        Already have an account? <a onclick="showLogin()">Login</a>
+      </div>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
