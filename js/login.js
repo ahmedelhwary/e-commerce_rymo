@@ -53,6 +53,7 @@ function signup() {
       if (icon) icon.classList.add("fa-eye");
     }
   }
+  togglePasswordVisibility();
   if (!validateEmail(email)) {
     Swal.fire({
       icon: "error",
